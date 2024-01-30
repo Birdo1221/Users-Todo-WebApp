@@ -20,7 +20,6 @@ To Use The To-Do List Applition:
       or  
   
         ```
-        
         pip install -r requirements.txt
         ```
 
