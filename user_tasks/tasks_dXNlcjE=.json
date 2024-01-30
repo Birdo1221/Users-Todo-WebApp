@@ -1,0 +1,15 @@
+[
+  {
+    "id": "5a4524cf-256f-4b78-8789-780e4c85d62a",
+    "name": "Setup",
+    "description": "Make sure to just run app.py and use the application",
+    "completed": false
+  },
+  {
+    "id": "5a4524cf-256f-4b78-8789-780e4c85d62b",
+    "name": "After App.y",
+    "description": "once u click around the web gui it should of created your user details and then its creates user_tasks for each user",
+    "completed": true,
+    "additional_description": "lemme run it for you"
+  }
+]

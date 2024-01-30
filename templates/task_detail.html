@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3c426b;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 60%;
+            margin: 20px auto;
+            background-color: #cfcfcf; /* login/registration */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10%;
+            position: relative; /* Added for positioning */
+        }
+        .left-section {
+            flex: 1;
+            padding: 20px;
+            text-align: center; /* Center text within left-section */
+        }
+        .right-section {
+            flex: 1;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #4CAF50;
+            padding: 10px 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 5px; /* Adjust margin as needed */
+        }
+        a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .dash-image{
+            border-radius: 20px; 
+        }
+        h2{
+            text-align: center;
+        }
+        .redirect {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px; /* Adjust margin as needed */
+            
+        }
+        .redirect:hover {
+            background-color: #2d7c31;
+            animation: change-color-green 4s ease-in-out infinite;
+
+        }
+        .banner {
+            background-color: #152631; /* Blue background color */
+            color: #fff; /* White text color */
+            padding: 2px; /* Add padding to the banner */
+            text-align: center;
+            text-transform: capitalize;  /* Center align text */
+        }
+        .banner:hover {
+            background-color: #152631bb; /* Blue background color */
+            color: snow;
+             /* White text color *//* Add padding to the banner */  /* Center align text */
+        }
+        .banner h3 {
+            font-size: 14px; /* Adjust the font size of the heading */
+        }
+        .banner p {
+            font-size: 16px; /* Adjust the font size of the paragraph */
+            margin-top: 2px; /* Add some margin between heading and paragraph */
+        }
+        .banner-2{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px; /* Adjust height as needed */
+            background-color: #152631; /* Blue background color */
+        }
+        .banner-2:hover {
+            background-color: #152631bb; /* Blue background color */
+        }
+        h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeGreenColor 4s infinite alternate; /* Add a subtle text shadow */
+        }
+        h3:hover {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeBlueColor 4s infinite alternate; /* Add a subtle text shadow */
+
+        }
+        @keyframes fadeBlueColor {
+            0% {
+                color: #64b5f6; /* Light blue */
+            }
+            25% {
+                color: #42a5f5; /* Medium blue */
+            }
+            50% {
+                color: #2196f3; /* Dark blue */
+            }
+            75% {
+                color: #1e88e5; /* Deeper blue */
+            }
+            100% {
+                color: #1976d2; /* Darkest blue */
+            }
+        }
+        @keyframes fadeGreenColor {
+            0% {
+                color: #81c784; /* Light green */
+            }
+            25% {
+                color: #66bb6a; /* Medium green */
+            }
+            50% {
+                color: #4caf50; /* Dark green */
+            }
+            75% {
+                color: #43a047; /* Deeper green */
+            }
+            100% {
+                color: #388e3c; /* Darkest green */
+            }
+        }
+        .bottom-text{
+            text-align: center;
+            color: snow;
+            opacity: 50%;
+            font-size: 14px;
+            margin: 10px;
+            height: -10%;
+        }
+        .spacer {
+            height: 5px; /* Adjust the height as needed */
+        }
+
+
+        .Tasktitle{
+            background-color: #b3b1b1; /* login/registration */
+            border-radius: 5px;
+            resize: none; 
+            border-spacing: 4px;
+            text-transform: capitalize;
+        }
+        .description{
+            background-color: #b3b1b1; /* login/registration */
+            border-radius: 5px;
+            resize: none; 
+            text-transform: capitalize;
+
+
+        }
+        .additional_description{
+            background-color: #b3b1b1; /* login/registration */
+            border-radius: 5px;
+            resize: none; 
+            text-transform: capitalize;
+
+            
+        }
+        .save-button{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px; /* Adjust margin as needed */
+        }
+        .save-button:hover{
+            animation: change-color-blue 4s ease-in-out infinite;
+            background-color: #236895;
+        }
+        .save-button:active{
+            background-color: #152631; /* Intermediate color */
+        }
+        .redirect:active{
+            background-color: #15311e; /* Intermediate color */
+        }
+        
+        @keyframes change-color-blue {
+            0% {
+                background-color: #236895; /* Intermediate color */
+            }
+            20% {
+                background-color: #054470; /* Final color */
+            }
+            50% {
+                background-color: #3a8fc8; /* Intermediate color */
+            }
+            90% {
+                background-color: #274255; /* Final color */
+            }
+            100% {
+                background-color: #236895; /* Final color */
+            }
+        }
+        @keyframes change-color-green {
+            0% {
+                background-color: #1c6e20; /* Light green */
+            }
+            20% {
+                background-color: #419746; /* Final color */
+            }
+            50% {
+                background-color: #2d512e; /* Dark green */
+            }
+            90% {
+                background-color: #0b3f0d; /* Darkest green */
+            }
+            100% {
+                background-color: #1c6e20; /* Darkest green */
+            }
+        }
+        .Task-title-title{
+            font-weight: bold;
+        }
+        .Task-title-description{
+            font-weight: bold;
+
+        }
+        .Task-title-additional{
+            font-weight: bold;
+
+        }
+
+            
+        
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h3>Welcome, Guest to the task-edit page </h3>
+        <p>Dont Forget to explore and look around</p>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <h2>To-Do Edit</h2>
+            <p>
+            This is a simple To-Do App designed 
+            to help you organize your tasks efficiently.
+            You can create, edit, and delete tasks easily
+            with this app.
+            </p>
+        </div>
+        <div class="right-section">
+            <!-- Form for editing task details -->
+            <form id="editForm" action="{{ url_for('edit_task', task_id=task.id) }}" method="POST">
+                <label class="Task-title-title" for="TaskTitle">Task Title:</label><br>
+                <textarea class="Tasktitle" id="TaskTitle" name="TaskTitle" rows="2" cols="50">{{ task.name }}</textarea><br>
+                <label class="Task-title-description" for="description">Main Description:</label><br>
+                <textarea class="description" name="description" rows="3" cols="50">{{ task.description }}</textarea><br>
+                <label class="Task-title-additional" for="additional_description">Additional Description:</label><br>
+                <textarea class="additional_description" name="additional_description" rows="5" cols="50">{{ task.additional_description }}</textarea><br>
+                <button class="save-button" type="submit">Save Changes</button>
+                <a class="redirect" href="/dashboard">Go Back</a>
+            </form>
+        </div>
+    </div>
+    <div class="banner-2">
+        <p class="bottom-text">  Made with ❤️ by Birdo</p>
+    </div>
+</body>
+</html>

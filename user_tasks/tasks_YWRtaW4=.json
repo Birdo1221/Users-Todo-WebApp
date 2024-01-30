@@ -1,0 +1,28 @@
+[
+  {
+    "id": "7d635374-eb85-4ba9-b9bb-bc3162fe5337",
+    "name": "feet",
+    "description": "get shoes and socks",
+    "completed": false,
+    "additional_description": "beeps"
+  },
+  {
+    "id": "46e155dc-bd90-4d05-98ac-64090e97fa48",
+    "name": "admin",
+    "description": "make sure to update default passwords and ssh keys",
+    "completed": false
+  },
+  {
+    "id": "ac9e4bb7-0a75-47d3-b5a5-6c7a184dbb27",
+    "name": "update to-do ",
+    "description": "Make to update to-do app for profile pfp's and clean-up code ",
+    "completed": false
+  },
+  {
+    "id": "d1f51f41-c7dd-4206-8575-6408a0c1695e",
+    "name": "hands",
+    "description": "get some gloves",
+    "completed": false,
+    "additional_description": "i need to go buy some gloves for the winter time"
+  }
+]

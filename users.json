@@ -1,0 +1,37 @@
+{ 
+  "admin": {
+    "password": "$2b$12$2RNk0VxgGNU14VWuP3HQfedBb5jHA7rbmwGbN/WF0VlPKgslmgiMa",
+    "security_question": "What is your favorite movie?",
+    "security_answer": "admin"
+  },
+  "user1": {
+    "password": "$2b$12$WtfGIgXYMbr2q8jxq/baDummpCZDbamRn1Pg92DmDhro0.HYtUGj2",
+    "security_question": "What is your favorite movie?",
+    "security_answer": "user1"
+  },
+  "user2": {
+    "password": "$2b$12$NYyl3luLmVVR44HtP2i57eXM2hZ2GNIlfHms7jfmtKHyaP2TmtLPa",
+    "security_question": "What is your favorite movie?",
+    "security_answer": "user2"
+  },
+  "user3": {
+    "password": "$2b$12$P3vBnQk2URgA2E/43dQaW.5GKaNsLjZohfgviBAxyLBzgnmhdVjMG",
+    "security_question": "What is the birthplace of your father?",
+    "security_answer": "user3"
+  },
+  "user4": {
+    "password": "$2b$12$mzZds4R/PKrO8A4znGiRxOfYDJD8/XXpSkS3YPdab/R7MJ4ZS4bQG",
+    "security_question": "What is the title of your favorite book?",
+    "security_answer": "user4"
+  },
+  "user5": {
+    "password": "$2b$12$Noa8PQ7spJ4XShxTA61/UeTmbiSnhKSfchCNTPLN.oyRJ5rQgBdOi",
+    "security_question": "What was the name of your first pet?",
+    "security_answer": "user5"
+  },
+  "user6": {
+    "password": "$2b$12$5qpZL0BHc2bMA3vrbBnWc.eOQx.BWJWYh0wD97EkHrEtGUvGSgDjK",
+    "security_question": "What is the name of your favorite childhood friend?",
+    "security_answer": "user6"
+  }
+}

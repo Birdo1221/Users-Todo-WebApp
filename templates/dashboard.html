@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App Dashboard</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        /* 
+        DONT FORGET 
+        SAME CSS 
+        login.html, 
+        register.html,  
+        index.html */
+        body::-webkit-scrollbar-thumb {
+        background: beige;
+        }
+        body::-webkit-scrollbar{
+            scrollbar-color: black;
+            background: #152631;
+            
+        }
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #3c426b;
+        
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #cfcfcf;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(43, 11, 71, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        input[type="text"], textarea {
+            padding: 10px;
+            width: 70%;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            resize: none; /* Disable resizing */
+            pointer-events:painted;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+
+        }
+        button[type="submit"]:hover{
+            transition: background-color 0.5s ease;
+            background-color: #2a5e2d;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .task-list {
+            margin-top: 20px;
+        }
+        .task-list-item {
+            text-transform: capitalize;
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .task-list-item:hover {
+            background-color: #a4cacf;
+        }
+        .task-list-item h3 {
+            margin: 0;
+            color: black
+            
+        }
+        .task-list-item p {
+            margin: 5px 0;
+            color: #333;
+            font-weight: bold;
+        }
+        .task-list-titles{
+            color: #4CAF50;
+
+
+        }
+        a {
+            text-decoration: none;
+            
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            position: relative; /* Set the position of the container relative */
+            text-align: left;
+            text-transform: capitalize;
+        }
+        .logout-button{
+            width: 120%;
+            padding: 9px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 12px;
+            position: relative;
+            top: 8px;
+           
+        }
+        .username_line{
+            text-decoration: underline;
+        }
+        /* Checkbox */
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: button;
+            -moz-appearance: button;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            margin-left: 20px;
+            float: right;
+
+        }
+        .task-title.completed {
+        text-decoration: line-through;
+        color: #000000; /* Adjust color of completed task title */
+                                        /* Set thickness of line-through */
+        text-decoration-thickness: 4px; /* Adjust thickness as needed */
+        }   
+
+        
+        input[type="checkbox"]:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+
+        }
+
+        /* Delete Button */
+        .delete_button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+            
+       
+        }
+
+        .delete_button:hover {
+            background-color: rgb(90, 20, 20); 
+        }
+        .edit-button {
+            background-color: #4CAF50;         
+            border: none;
+            color: snow;
+            border-radius: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 16px;
+            top: 20px;
+            
+       
+        }
+        .edit-button:hover {
+            background-color: #2a5e2d;    
+        }
+        .banner {
+            background-color: #152631; /* Blue background color */
+            color: #fff; /* White text color */
+            padding: 4px;
+            text-align: center;
+            text-transform: capitalize;  /* Center align text */
+
+        }
+        .banner:hover {
+            background-color: #152631bb; /* Blue background color */
+            color: snow;
+             /* White text color *//* Add padding to the banner */  /* Center align text */
+        }
+
+        .banner h5 {
+            font-size: 14px; /* Adjust the font size of the heading */
+        }
+
+        .banner p {
+            font-size: 16px; /* Adjust the font size of the paragraph */
+        }
+        .banner-2 {
+        position: fixed; /* Change position to fixed */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px; /* Adjust height as needed */
+        background-color: #152631; /* Blue background color */
+        z-index: 10; /* Ensure the banner stays on top of other content */
+        }
+        .banner-2:hover{
+            background-color: #152631bb; /* Blue background color */
+
+        }
+        h5 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        animation: fadeGreenColor 4s infinite alternate; /* Add a subtle text shadow */
+        }
+        h5:hover {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        animation: fadeBlueColor 4s infinite alternate; /* Add a subtle text shadow */
+
+        }
+
+
+                /* Blue Shades Animation */
+        @keyframes fadeBlueColor {
+            0% {
+                color: #64b5f6; /* Light blue */
+            }
+            25% {
+                color: #42a5f5; /* Medium blue */
+            }
+            50% {
+                color: #2196f3; /* Dark blue */
+            }
+            75% {
+                color: #1e88e5; /* Deeper blue */
+            }
+            100% {
+                color: #1976d2; /* Darkest blue */
+            }
+        }
+        @keyframes fadeGreenColor {
+            0% {
+                color: #81c784; /* Light green */
+            }
+            25% {
+                color: #66bb6a; /* Medium green */
+            }
+            50% {
+                color: #4caf50; /* Dark green */
+            }
+            75% {
+                color: #43a047; /* Deeper green */
+            }
+            100% {
+                color: #388e3c; /* Darkest green */
+            }
+        }
+        .bottom-text{
+            text-align: center;
+            color: snow;
+            opacity: 50%;
+            font-size: 14px;
+        }
+        .spacer{
+            padding-top: 50px;
+        }
+     
+
+
+        
+
+
+
+
+        /* Add additional styles DUMBOOO */
+    </style>
+</head>
+<div class="banner">
+    <h5>Welcome, {{username}} to the dashboard page </h3>
+    <p>Have fun using this app and make sure to leave feedback</p>
+</div>
+<body>
+    <div class="container">
+        <h2>This is <a class="username_line">{{username}}</a> To-do list</h2>
+
+        <h1>To-Do App Dashboard</h1>
+        <form action="/add_task" method="POST">
+            <input type="text" name="task_name" placeholder="Task Name" required>
+            <textarea name="task_description" placeholder="Task Description" rows="3" required></textarea>
+            <button type="submit">Add Task</button>
+        </form>
+        <!-- Inside the task list -->
+        <ul class="task-list">
+            {% for task in tasks %}
+            <li class="task-list-item {% if task.completed %}completed{% endif %}">
+                <h3 class="task-title {% if task.completed %}completed{% endif %}">
+                    <a class="task-list-titles" href="{{ url_for('task_detail', task_id=task.id) }}">{{ task.name }}</a>
+                </h3>
+                <p class="task-list-item">{{ task.description }}</p>
+                <input type="checkbox" id="myCheckbox{{ task.id }}" {% if task.completed %}checked{% endif %} onclick="toggleTask('{{ task.id }}')">
+                <div class="target-element"></div>
+                <button class="delete_button" onclick="deleteTask('{{ task.id }}')">Delete</button>
+                
+                <p><a class="edit-button" href="{{ url_for('task_detail', task_id=task.id) }}"> edit </a></p>
+                
+            </li>
+            {% endfor %}
+        </ul>
+        <p><a class="logout-button" href="{{ url_for('logout') }}"> Logout </a></p>
+        <div></div>
+    </div>
+    
+    <div class="spacer"></div>
+    <div class="banner-2">
+        <p class="bottom-text">    Made with ❤️ by Birdo
+        </p>
+      </div> 
+      
+
+    <script>
+        function toggleTask(taskId) {
+    var checkbox = document.getElementById('myCheckbox' + taskId);
+    var taskTitle = checkbox.parentElement.querySelector('.task-title');
+
+    fetch('/toggle_task', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ taskId: taskId }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        // Toggle 'completed' class based on checkbox state
+        taskTitle.classList.toggle('completed', checkbox.checked);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+function deleteTask(taskId) {
+    fetch('/delete_task', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ taskId: taskId }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        location.reload();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+    </script>
+</body>
+</html>
