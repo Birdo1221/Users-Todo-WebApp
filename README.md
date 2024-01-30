@@ -38,13 +38,12 @@ The application comprises several files and directories, each serving a specific
 - **Created Directories / Files:**
   - **user_tasks directory:** Holds JSON files that store task data for each user.
   -  Each user has a unique task file associated with their account that is named by based64 encoding
-  -  their username as the file name
+     their username as the file name
  
-  - E.g
-  - [task_(UsernameBase64).json]   [tasks_YWRtaW4=.json]  This is an admin example [YWRtaW4=  is admin]
+  - E.g  [task_(UsernameBase64).json]   [tasks_YWRtaW4=.json]  This is an admin example [YWRtaW4=  is admin]
  
   -  Now for each user, every tasks that is generated is using uuid to name the tasks to save / store them in the users independant
-  -  .json file that will contain:
+     .json file that will contain:
         ```
         [
         UUID Generated Id
