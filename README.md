@@ -1,4 +1,7 @@
 # To-Do List Application
+![Example Image](static/dash1.png)
+
+![Example Image2](static/dash2.png)
 
 ## Introduction
 
