@@ -45,10 +45,11 @@ The application comprises several files and directories, each serving a specific
  
   -  Now for each user, every tasks that is generated is using uuid to name the tasks to save / store them in the users independant
   -  .json file that will contain:
-  -  UUID Generated Id
-  -  Task Name
-  -  The Task Description
-  -  If marked it completed or not
+  -      ```[UUID Generated Id
+  -      Task Name
+  -      The Task Description
+  -      If marked it completed or not]
+  -      ```
         ```
         [
         {
