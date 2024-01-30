@@ -17,7 +17,7 @@ To Use The To-Do List Applition:
     pip install Flask
     pip install flask-bcrypt
     ```
-      or  
+      Or  
   
         
         pip install -r requirements.txt
