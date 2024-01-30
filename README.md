@@ -17,12 +17,12 @@ To Use The To-Do List Applition:
     pip install Flask
     pip install flask-bcrypt
     ```
-  or  
+      or  
   
-    ```
-    
-    pip install -r requirements.txt
-    ```
+        ```
+        
+        pip install -r requirements.txt
+        ```
 
 2. Clone the repository:
     ```
