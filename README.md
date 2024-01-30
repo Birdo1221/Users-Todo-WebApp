@@ -30,8 +30,8 @@ To Use The To-Do List Applition:
 
 3. App secret_key
    ```
-   Make sure to change this value 'app.secret_key' as it currently being used to sign session cookies
-   and handle session management.
+   Make sure to change this value 'app.secret_key' as it currently being used to sign
+   session cookies and handle session management.
    This is only because we are using the Flask framework.
    ```
 ## File Structure
