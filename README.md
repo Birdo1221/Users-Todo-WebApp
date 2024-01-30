@@ -26,6 +26,13 @@ To Use The To-Do List Applition:
     ```
     git clone https://github.com/Birdo1221/Users-Todo-WebApp.git
     cd Users-Todo-WebApp
+
+3. App secret_key
+   ```
+   Make sure to change this value 'app.secret_key' as it currently being used to sign session cookies
+   and handle session management.
+   This is only because we are using the Flask framework.
+   ```
 ## File Structure
 
 The application comprises several files and directories, each serving a specific purpose:
@@ -112,4 +119,5 @@ The application comprises several files and directories, each serving a specific
 
 ## Conclusion
 
-The To-Do List Application serves as a valuable tool for users seeking to manage their tasks effectively. With its user-friendly interface, robust functionality, and emphasis on security, the application aims to streamline task management and improve productivity. Continual feedback and iterative improvements ensure that the application remains responsive to user needs and preferences.
+The To-Do List Application serves as a tool for users that seek to manage their tasks effectively. With a minimalist, user-friendly interface 
+and basic functionality, with an essential part of security, this application aims to help improve task management and productivity with efficiency and  .
