@@ -19,9 +19,9 @@ To Use The To-Do List Applition:
     ```
       or  
   
-        ```
+        
         pip install -r requirements.txt
-        ```
+    
 
 2. Clone the repository:
     ```
