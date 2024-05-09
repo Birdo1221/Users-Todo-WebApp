@@ -5,33 +5,29 @@
 
 ## Introduction
 
-This is a To-Do List Application is a web-based task management system developed by using the popular Flask web framework in Python.
-This Application allows users to register, log in, create tasks, edit tasks, mark tasks as completed, and delete tasks. 
-The application is aimed to help me build my still with python, html and css with the usage of a un-native python framworks
-to help build and run this Application.
+This To-Do List Application is a web-based task management system developed using the popular Flask web framework in Python. The application allows users to register, log in, create tasks, edit tasks, mark tasks as completed, and delete tasks. It is aimed at helping users build their skills with Python, HTML, and CSS, utilizing a non-native Python framework to build and run the application.
 
-This was built as well for general usage and to help organize daily
-tasks effectively for me and other users.
+The application was built for general usage and to help organize daily tasks effectively for both myself and other users.
 
 ## Usage
-To Use The To-Do List Applition:
+To use the To-Do List Application:
 1. Install dependencies:
-    ```
+    ```bash
     pip install Flask
     pip install flask-bcrypt
     ```
-      Or  
-  
-        
-        pip install -r requirements.txt
-    
+    Or  
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 2. Clone the repository:
-    ```
+    ```bash
     git clone https://github.com/Birdo1221/Users-Todo-WebApp.git
     cd Users-Todo-WebApp
+    ```
 
-3. App secret_key
+3. App secret_key:
    ```
    Make sure to change this value 'app.secret_key' as it currently being used to sign
    session cookies and handle session management.
@@ -42,57 +38,58 @@ To Use The To-Do List Applition:
 The application comprises several files and directories, each serving a specific purpose:
 
 - **Flask File Structure:**
-  - **app.py:** This is the main Flask application file where the routes and functionality of the web application are defined.
-  - **templates directory:** Contains HTML templates for rendering the pages to the users.
-  - **static directory:** Stores static files such as CSS, JavaScript, and images used by the application.
-   
+- **app.py:** This is the main Flask application file where the routes and functionality of the web application are defined.
+- **templates directory:** Contains HTML templates for rendering pages to users.
+- **static directory:** Stores static files such as CSS, JavaScript, and images used by the application.
+
 - **Created Directories / Files:**
-  - **user_tasks directory:** Holds JSON files that store task data for each user.
-  -  Each user has a unique task file associated with their account that is named by based64 encoding
-     their username as the file name
- 
-  - E.g  [task_(UsernameBase64).json]   [tasks_YWRtaW4=.json]  This is an admin example [YWRtaW4=  is admin]
- 
-  -  Now for each user, every tasks that is generated is using uuid to name the tasks to save / store them in the users independant
-     .json file that will contain:
-        ```
-        [
-        UUID Generated Id
-        Task Name
-        The Task Description
-        If marked it completed or not
-        ]
-        ```
-        ```
-        [
-        {
-      "id": "ac9e4bb7-0a75-47d3-b5a5-6c7a184dbb27",        
-      "name": "update to-do ",                                  
-      "description": "Make to update to-do app for profile pfp's and clean-up code ", 
-      "completed": false                                         
-        },
-        {
-          "id": "d1f51f41-c7dd-4206-8575-6408a0c1695e",
-          "name": "hands",
-          "description": "get some gloves",
-          "completed": true,
-          "additional_description": "i need to go buy some gloves for the winter time"
-        }
-        ]
-        ```
+- **user_tasks directory:** Holds JSON files that store task data for each user.
+- Each user has a unique task file associated with their account that is named based on the Base64 encoding of their username.
+- E.g., [task_(UsernameBase64).json]   [tasks_YWRtaW4=.json]  This is an admin example [YWRtaW4= is admin]
+- For each user, every task is generated using a UUID to name the tasks and save/store them in the user's independent JSON file, which contains:
+  
+-     
+     ```
+     [
+     UUID Generated Id
+     Task Name
+     The Task Description
+     If marked as completed or not
+     ]
+     ```
+     Example:
+     ```
+     [
+     {
+       "id": "ac9e4bb7-0a75-47d3-b5a5-6c7a184dbb27",
+       "name": "update to-do ",
+       "description": "Make to update to-do app for profile pfp's and clean-up code ",
+       "completed": false
+     },
+     {
+       "id": "d1f51f41-c7dd-4206-8575-6408a0c1695e",
+       "name": "hands",
+       "description": "get some gloves",
+       "completed": true,
+       "additional_description": "I need to go buy some gloves for the winter time"
+     }
+     ]
+     ```
+-
+
 ## Functionalities
 
 ### 1. Registration and Login
 
 - Users can register for an account by providing a unique username, password, security question, and answer.
 - Passwords are securely hashed using the `bcrypt` library to ensure data security.
-- Upon successful registration, users can log in using their oorrect credentials.
+- Upon successful registration, users can log in using their correct credentials.
 
 ### 2. Dashboard
 
 - Authenticated users are directed to the dashboard upon login.
-- The dashboard displays a web GUI for the creation of user's tasks as well as, allowing them to view, edit, delete, and mark tasks as completed.
-- Tasks are stored in JSON files associated with each user to maintain privacy and data simplicity .
+- The dashboard displays a web GUI for the creation of users' tasks as well as allowing them to view, edit, delete, and mark tasks as completed.
+- Tasks are stored in JSON files associated with each user to maintain privacy and data simplicity.
 
 ### 3. Task Management
 
@@ -121,7 +118,8 @@ The application comprises several files and directories, each serving a specific
 - Introduce collaboration features to enable users to share tasks and collaborate on projects with team members.
 - Add more user control and user profiling such as user pfp's and additional settings.
 
+
 ## Conclusion
 
-The To-Do List Application serves as a tool for users that seek to manage their tasks effectively. With a minimalist, user-friendly interface 
-and basic functionality, with an essential part of security, this application aims to help improve task management and productivity with efficiency and  .
+The To-Do List Application serves as a tool for users who seek to manage their tasks effectively. With a minimalist, user-friendly interface and basic functionality, with an essential part of security, this application aims to help improve task management and productivity efficiently.
+
