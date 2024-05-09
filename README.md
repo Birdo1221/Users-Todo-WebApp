@@ -49,7 +49,9 @@ The application comprises several files and directories, each serving a specific
 
   
 - For example: [task_(UsernameBase64).json]
-- [  YWRtaW4=  ] represents Admin, so the file will be named: [tasks_YWRtaW4=.json]
+- [  YWRtaW4=  ] represents Admin, so the file will be named: [ tasks_YWRtaW4=.json ]
+
+- Better understanding of this would be :  [ tasks_admin.json ]  == [ tasks_YWRtaW4=.json ]
 
 
 
