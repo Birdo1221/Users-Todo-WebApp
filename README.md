@@ -45,9 +45,7 @@ The application comprises several files and directories, each serving a specific
 - **Created Directories / Files:**
 - **user_tasks directory:** Holds JSON files that store task data for each user.
 - Each user has a unique task file associated with their account name based on a Base64 encoding of their username.
-- E.g.. [task_(UsernameBase64).json]
-   An example for admin:  [YWRtaW4= is admin]
-   [tasks_YWRtaW4=.json] is the file name
+- E.g.. [task_(UsernameBase64).json]   [YWRtaW4=]  == Admin, so the file will be called:   [tasks_YWRtaW4=.json]
 - For each user, every task is generated using a UUID to name the tasks and save/store them in the user's independent JSON file, which contains:
   
 -     
