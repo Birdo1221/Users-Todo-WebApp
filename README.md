@@ -1,13 +1,12 @@
 # To-Do List Application
-![Example Image](static/dash1.png)
-
-![Example Image2](static/dash2.png)
 
 ## Introduction
 
 This To-Do List Application is a web-based task management system developed using the popular Flask web framework in Python. The application allows users to register, log in, create tasks, edit tasks, mark tasks as completed, and delete tasks. It is aimed at helping users build their skills with Python, HTML, and CSS, utilizing a non-native Python framework to build and run the application.
 
 The application was built for general usage and to help organize daily tasks effectively for both myself and other users.
+
+![Example Image](static/dash1.png)
 
 ## Usage
 To use the To-Do List Application:
@@ -109,6 +108,9 @@ The application comprises several files and directories, each serving a specific
 
 - Passwords are hashed using the bcrypt algorithm to ensure confidentiality and integrity.
 - Security questions and answers provide an additional layer of authentication, enhancing account security.
+
+![Example Image2](static/dash2.png)
+
 
 ## Feedback and Improvement
 
