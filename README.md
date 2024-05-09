@@ -52,11 +52,12 @@ The application comprises several files and directories, each serving a specific
 - [  YWRtaW4=  ] represents Admin, so the file will be named: [ tasks_YWRtaW4=.json ]
 
 - Better understanding of this would be :  [ tasks_admin.json ]  == [ tasks_YWRtaW4=.json ]
+- can 
 
 
 
 
-- For each user, every task is generated using a UUID to name the tasks and save/store them in the user's independent JSON file, which contains:
+- For each user, each task that is generated uses a UUID to name the tasks to save / store them in the user's independent JSON file,  [ tasks_admin.json ]  which contents will contain :
   
 -     
      ```
