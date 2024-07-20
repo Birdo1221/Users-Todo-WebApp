@@ -2,9 +2,8 @@
 
 ## Introduction
 
-This To-Do List Application is a web-based task management system developed using the popular Flask web framework in Python. The application allows users to register, log in, create tasks, edit tasks, mark tasks as completed, and delete tasks. It is aimed at helping users build their skills with Python, HTML, and CSS, utilizing a non-native Python framework to build and run the application.
-
-The application was built for general usage and to help organize daily tasks effectively for both myself and other users.
+A To-Do List Application using the Flask framework. The application allows users to register, log in, create tasks, edit tasks, mark tasks as completed and delete tasks.
+The application was built for general usage and to help organize daily tasks effectively.
 
 ![Example Image](static/dash1.png)
 
@@ -46,7 +45,7 @@ The application comprises several files and directories, each serving a specific
 - **user_tasks directory:** Holds JSON files that store task data for each user.
 - Each user has a unique task file associated with their account name based on a Base64 encoding of their username.
 
-  
+
 - For example: [task_(UsernameBase64).json]
 - [  YWRtaW4=  ] represents Admin, so the file will be named: [ tasks_YWRtaW4=.json ]
 
@@ -126,7 +125,6 @@ The application comprises several files and directories, each serving a specific
 - Implement notifications and reminders to alert users of approaching deadlines or overdue tasks.
 - Introduce collaboration features to enable users to share tasks and collaborate on projects with team members.
 - Add more user control and user profiling such as user pfp's and additional settings.
-
 
 ## Conclusion
 
